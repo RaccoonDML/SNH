@@ -4,15 +4,20 @@ This framework are twofold:
 1. **Java part:** mainly for formula logic analysis. reference--(https://github.com/woshiwpa/CoreMathImgProc)。   
 2. **Python part** use CNN (convolutional neural network) to recognize single character. reference--(https://github.com/anujdutt9/Handwritten-Digit-Recognition-using-Deep-Learning/tree/master/CNN_Keras)  
 
-More detail in the developer documentation. please refer to it by yourself.
+More detail in the **developer_documentation.pdf**. please refer to it by yourself.
 
-## Requirement
+# Requirement
 ### Java environment
+java 9/10/11, javafx
+### Python environment
+python 3.6, numpy, PIL, keras, skimage
 
-- 在python下新建data文件夹
-- 在res下新建prepresult文件夹
+# Start to use
+First, run python/reco.py.  
+Second, run src/jimageproseccor/SNH.java.  
+Finally, operate on the UI.
 
-## [Summary of model features]---In general, try to write as clearly as possible
+# [Summary of model features]---In general, try to write as clearly as possible
 - 1.指数和底数大小要合适。
 - 2.积分内部函数位置要适中(积分号写的大一点)。
 - 3.极力避免黏连（过度切分机制还有待研究）。
