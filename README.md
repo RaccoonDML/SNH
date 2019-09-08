@@ -20,7 +20,7 @@ Second, run src/jimageproseccor/SNH.java.
 Finally, operate on the UI.
   
   
-# [Summary of model features]  
+# Summary of model features 
 -- In general, try to write as clearly as possible
 - 1.指数和底数大小要合适。
 - 2.积分内部函数位置要适中(积分号写的大一点)。
