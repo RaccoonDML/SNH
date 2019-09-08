@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.TextFlow?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="jimageprocessor.Controller">
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <AnchorPane prefHeight="600.0" prefWidth="800.0">
+         <children>
+            <ScrollPane layoutX="430.0" layoutY="40.0" prefViewportHeight="530.0" prefViewportWidth="350.0">
+               <content>
+                  <TextFlow fx:id="CommandFlow" cache="true" layoutX="430.0" layoutY="40.0" prefHeight="530.0" prefWidth="350.0" />
+               </content>
+            </ScrollPane>
+            <AnchorPane fx:id="AP" cacheShape="false" layoutX="14.0" layoutY="287.0" prefHeight="255.0" prefWidth="400.0" />
+            <TextField fx:id="FileAddressField" layoutX="54.0" layoutY="118.0" prefHeight="27.0" prefWidth="310.0" />
+            <Button fx:id="OpenButton" layoutX="328.0" layoutY="118.0" mnemonicParsing="false" onAction="#OpenFiles" prefHeight="27.0" prefWidth="35.0" text="Open" />
+            <Button layoutX="180" layoutY="170.0" mnemonicParsing="false" onAction="#RunProcess" text="RUN" wrapText="true">
+               <font>
+               <Font size="12.0" />
+            </font>
+            </Button>
+            <Button layoutX="250" layoutY="170.0" mnemonicParsing="false" onAction="#calculate" text="CAL" wrapText="true">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Button>
+            <Button layoutX="110" layoutY="170.0" mnemonicParsing="false" onAction="#PreProcess" text="PRE" wrapText="true">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="90.0" fitWidth="310.0" layoutX="71.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@logo.PNG" />
+               </image>
+            </ImageView>
+            <Button fx:id="prevPicButton" layoutX="148.0" layoutY="559.0" mnemonicParsing="false" text="&lt;" />
+            <Button fx:id="nextPicButton" layoutX="254.0" layoutY="559.0" mnemonicParsing="false" text="&gt;" />
+            <Label fx:id="fileNameLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="14.0" layoutY="542.0" prefHeight="17.0" prefWidth="400.0" textAlignment="CENTER" />
+            <Button layoutX="150" layoutY="215.0" mnemonicParsing="false" onAction="#RunAll" text="     RUN_ALL     " wrapText="true">
+               <font>
+                  <Font name="Menlo Regular" size="12.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</GridPane>
