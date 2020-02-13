@@ -11,7 +11,7 @@ More detail in the **developer_documentation.pdf**. please refer to it by yourse
 ### Java environment
 java 9/10/11, javafx
 ### Python environment
-python 3.6
+python 3.6,
 other module in /python/requirements.txt
   
   
