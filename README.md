@@ -5,13 +5,14 @@ This framework are twofold:
 2. **Python part** use CNN (convolutional neural network) to recognize single character. reference--(https://github.com/anujdutt9/Handwritten-Digit-Recognition-using-Deep-Learning/tree/master/CNN_Keras)  
 
 More detail in the **developer_documentation.pdf**. please refer to it by yourself.  
-  
-  
+
+
 # Requirement
 ### Java environment
 java 9/10/11, javafx
 ### Python environment
-python 3.6, numpy, PIL, keras, skimage
+python 3.6
+other module in /python/requirements.txt
   
   
 # Start to use

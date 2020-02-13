@@ -465,8 +465,8 @@ public class ExprRecognizer {
                     String dirs = "python" + File.separator + "data" + File.separator + String.format("%03d", 1) + ".jpg";
                     heise=ImgMatrixOutput.createMatrixImage(imgChopThinned.mbarrayImg, dirs);
                     //分析图片用的，可注释这两行
-                    String dml_dir = "dml_data" + File.separator + String.format("%03d", ++dml_cnt) + ".jpg";
-                    ImgMatrixOutput.createMatrixImage(imgChopThinned.mbarrayImg, dml_dir);
+//                    String dml_dir = "dml_data" + File.separator + String.format("%03d", ++dml_cnt) + ".jpg";
+//                    ImgMatrixOutput.createMatrixImage(imgChopThinned.mbarrayImg, dml_dir);
 
                     //todo add some rule to not use or trust py's result by LH
                     //if(!shouldnotUsePy(serReturnCand1))
@@ -526,7 +526,7 @@ public class ExprRecognizer {
                     else if(serReturnCand1.mdSimilarity>0.07){
                         serReturnCand1.mType = correctPY_YX(getTpye(resu),serReturnCand1.mType,serReturnCand1.mType);
                         serReturnCand2 = disconnect2Recog(imgChopsFrom, nCutMode, imgChopsFrom.mlistChops.indexOf(imgChopOriginal), dAvgStrokeWidth, serReturnCand1, new LinkedList<ImageChop>(), nStackLvl + 1);
-                        System.out.println("切分："+serReturnCand1.toString()+"\t"+serReturnCand2.toString());
+//                        System.out.println("切分："+serReturnCand1.toString()+"\t"+serReturnCand2.toString());
                         String YX_Cand3=serReturnCand2.toString();
                         if(YX_Cand3.length()==2 && isNumeric(YX_Cand3))
                         {
@@ -658,10 +658,10 @@ public class ExprRecognizer {
         {//python:2 java:z 则：2
             return UnitProtoType.Type.TYPE_NINE;
         }
-//        else if(pythonType==UnitProtoType.Type.TYPE_ADD && javaType==UnitProtoType.Type.TYPE_SMALL_F)
-//        {//python:2 java:z 则：2
-//            return UnitProtoType.Type.TYPE_DOT;
-//        }
+        else if(pythonType==UnitProtoType.Type.TYPE_EMPTY)
+        {//python:2 java:z 则：2
+            return javaType;
+        }
         //todo dml change 2.1
         else if(pythonType==UnitProtoType.Type.TYPE_ONE&&similarty>0.9985 && javaType==UnitProtoType.Type.TYPE_ROUND_BRACKET)
         {//python:2 java:z 则：2

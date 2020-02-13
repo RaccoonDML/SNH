@@ -1,8 +1,6 @@
 import os
-
 import socket
 import sympy
-
 import numpy as np
 from PIL import ImageEnhance, Image
 from cnn.neural_network import CNN
@@ -62,6 +60,7 @@ if __name__ == "__main__":
         for line in file:
             line = line.strip().split()[0]
             model_labels.append(line)
+    print('333')
 
     clf = CNN.build(width=32, height=32, depth=1, total_classes=len(model_labels), input_shape=(32, 32, 1),
                     Saved_Weights_Path='yuxi_37_lr=01_decay=1e-6_momentum=08.hdf5')  # change model file name
@@ -70,11 +69,12 @@ if __name__ == "__main__":
     # if not file.startswith("."):
     # if not file.endswith('_conv.png'):
     # convert_img(file)
-
+    print('444')
     sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     address = ('localhost', 9998)
     sock.bind(address)
     sock.listen()
+    print('222')
 
     while True:
         all_images = []
@@ -120,3 +120,4 @@ if __name__ == "__main__":
 
         # newSocket.send(bytes('thank you\n', encoding='utf-8'))
         newSocket.close()
+        print('111')
